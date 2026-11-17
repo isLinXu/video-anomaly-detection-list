@@ -1,0 +1,332 @@
+# Video Anomaly Detection Taxonomy
+# 用于自动抓取和分类论文的配置
+
+categories:
+  # ========== 主要监督设定 ==========
+  - id: weakly-supervised-vad
+    name: "弱监督 VAD"
+    emoji: "👁️"
+    doc: "docs/weakly-supervised-vad.md"
+    description: "仅使用视频级标签进行训练，检测帧级或区域级异常"
+    arxiv_queries:
+      - 'video anomaly detection weakly supervised'
+    github_queries:
+      - '"weakly supervised" "anomaly detection" video'
+    keywords:
+      strong:
+        - "weakly supervised anomaly"
+        - "weakly-supervised anomaly"
+        - "weakly supervised video anomaly"
+        - "wsvad"
+      medium:
+        - "multiple instance learning anomaly"
+        - "mil anomaly detection"
+        - "video anomaly weakly supervised"
+      weak:
+        - "anomaly detection video"
+        - "video anomaly"
+    classics:
+      - id: "2106.10897"
+        expect: "abnet"
+        note: "ABNet: Learning Absence of Evidence for Anomaly Detection"
+      - id: "2006.04737"
+        expect: "sfa-net"
+        note: "SFA-Net: Spatial-Frequency Awareness"
+
+  - id: semi-supervised-vad
+    name: "半监督 VAD"
+    emoji: "🔍"
+    doc: "docs/semi-supervised-vad.md"
+    description: "仅使用正常视频训练，检测异常事件"
+    arxiv_queries:
+      - 'video anomaly detection semi-supervised'
+    github_queries:
+      - '"semi-supervised" "anomaly detection" video'
+    keywords:
+      strong:
+        - "semi-supervised anomaly"
+        - "semi-supervised video anomaly"
+        - "normal video only"
+        - "anomaly detection normal training"
+        - "ssvad"
+      medium:
+        - "anomaly detection unsupervised"
+        - "unsupervised video anomaly"
+        - "reconstruction-based anomaly"
+        - "feature distribution anomaly"
+      weak:
+        - "video anomaly detection"
+        - "anomaly detection video"
+    classics:
+      - id: "1903.04648"
+        expect: "patch-detect"
+        note: "PatchELH: Density Estimation for Anomaly Detection"
+      - id: "2003.01923"
+        expect: "srav"
+        note: "SRAV: Self-supervised Representation learning for Anomaly Video detection"
+
+  - id: fully-supervised-vad
+    name: "全监督 VAD"
+    emoji: "📊"
+    doc: "docs/fully-supervised-vad.md"
+    description: "使用标注的异常和正常视频进行训练"
+    arxiv_queries:
+      - 'video anomaly detection supervised'
+    github_queries:
+      - '"fully supervised" "anomaly detection" video'
+    keywords:
+      strong:
+        - "fully supervised anomaly"
+        - "fully-supervised anomaly"
+        - "supervised video anomaly"
+      medium:
+        - "anomaly classification video"
+        - "video anomaly classification"
+        - "temporal action anomaly"
+      weak:
+        - "video anomaly"
+        - "anomaly detection"
+    classics:
+      - id: "2106.07708"
+        expect: "tdap"
+        note: "TDAP: Temporal Dependency Awareness"
+
+  # ========== 新兴设定 ==========
+  - id: open-world-vad
+    name: "开放世界 VAD"
+    emoji: "🌍"
+    doc: "docs/open-world-vad.md"
+    description: "检测和描述未见过的异常类型"
+    arxiv_queries:
+      - 'video anomaly detection open world'
+      - 'video anomaly detection novel unknown'
+    github_queries:
+      - '"open world" "anomaly detection" video'
+    keywords:
+      strong:
+        - "open-world anomaly"
+        - "open world video anomaly"
+        - "open-set anomaly"
+        - "novel anomaly detection"
+        - "unknown anomaly"
+      medium:
+        - "zero-shot anomaly detection"
+        - "zero-shot video anomaly"
+        - "unseen anomaly"
+      weak:
+        - "video anomaly description"
+        - "anomaly description"
+    classics:
+      - id: "2306.04181"
+        expect: "hawk"
+        note: "HAWK: Learning to Understand Open-World Video Anomalies"
+
+  - id: video-anomaly-retrieval
+    name: "视频异常检索"
+    emoji: "🔎"
+    doc: "docs/video-anomaly-retrieval.md"
+    description: "基于自然语言查询检索视频中的异常片段"
+    arxiv_queries:
+      - 'video anomaly retrieval'
+      - 'video anomaly localization text'
+    github_queries:
+      - '"video anomaly retrieval" OR "anomaly retrieval"'
+    keywords:
+      strong:
+        - "video anomaly retrieval"
+        - "anomaly retrieval"
+        - "video anomaly localization text"
+        - "language-based anomaly"
+        - "text-video anomaly"
+      medium:
+        - "cross-modal anomaly"
+        - "multimodal anomaly retrieval"
+        - "video anomaly search"
+      weak:
+        - "video-text anomaly"
+        - "anomaly grounding"
+    classics: []
+
+  - id: video-anomaly-understanding
+    name: "视频异常理解"
+    emoji: "🧠"
+    doc: "docs/video-anomaly-understanding.md"
+    description: "使用大视觉语言模型进行异常检测和解释"
+    arxiv_queries:
+      - 'video anomaly detection large language model'
+      - 'video anomaly vision-language model'
+    github_queries:
+      - '"anomaly detection" "large language model" OR "anomaly" "vision-language model" video'
+    keywords:
+      strong:
+        - "video anomaly understanding"
+        - "anomaly detection LMM"
+        - "anomaly detection multimodal"
+        - "video anomaly LLM"
+        - "anomaly vision-language"
+      medium:
+        - "anomaly detection foundation model"
+        - "video anomaly large model"
+        - "anomaly detection transformer large"
+      weak:
+        - "anomaly detection multimodal"
+        - "video anomaly explanation"
+    classics: []
+
+  # ========== 方法类别 ==========
+  - id: skeleton-based-vad
+    name: "基于骨架的 VAD"
+    emoji: "🦴"
+    doc: "docs/skeleton-based-vad.md"
+    description: "利用人体骨架信息进行异常检测"
+    arxiv_queries:
+      - 'video anomaly detection skeleton'
+      - 'pose-based anomaly detection'
+    github_queries:
+      - '"skeleton" "anomaly detection" video'
+    keywords:
+      strong:
+        - "skeleton-based anomaly"
+        - "skeleton anomaly detection"
+        - "pose-based anomaly"
+        - "skeleton video anomaly"
+      medium:
+        - "human pose anomaly"
+        - "skeleton action anomaly"
+        - "body motion anomaly"
+      weak:
+        - "skeleton action recognition anomaly"
+    classics: []
+
+  - id: prompt-based-vad
+    name: "提示学习 VAD"
+    emoji: "💬"
+    doc: "docs/prompt-based-vad.md"
+    description: "使用 prompt learning 或提示模板进行异常检测"
+    arxiv_queries:
+      - 'video anomaly detection prompt'
+    github_queries:
+      - '"prompt" "anomaly detection" video'
+    keywords:
+      strong:
+        - "prompt learning anomaly"
+        - "prompt-based anomaly"
+        - "prompt video anomaly"
+        - "adaptive prompt anomaly"
+      medium:
+        - "visual prompt anomaly"
+        - "text prompt anomaly"
+        - "learnable prompt anomaly"
+      weak:
+        - "anomaly detection prompt"
+        - "prompt anomaly"
+    classics: []
+
+  - id: self-supervised-vad
+    name: "自监督 VAD"
+    emoji: "🔄"
+    doc: "docs/self-supervised-vad.md"
+    description: "通过自监督预训练学习正常模式"
+    arxiv_queries:
+      - 'video anomaly detection self-supervised'
+    github_queries:
+      - '"self-supervised" "anomaly detection" video'
+    keywords:
+      strong:
+        - "self-supervised anomaly detection"
+        - "self-supervised video anomaly"
+        - "self-supervised learning anomaly"
+      medium:
+        - "contrastive learning anomaly"
+        - "masked modeling anomaly"
+        - "prediction-based anomaly"
+      weak:
+        - "video self-supervised anomaly"
+        - "pretrained model anomaly"
+    classics: []
+
+  # ========== 综述与基准 ==========
+  - id: vad-surveys
+    name: "综述论文"
+    emoji: "📚"
+    doc: "docs/surveys.md"
+    description: "Video Anomaly Detection 领域的综述、调研论文"
+    arxiv_queries:
+      - 'video anomaly detection survey review'
+    github_queries: []
+    keywords:
+      strong:
+        - "video anomaly detection survey"
+        - "video anomaly detection review"
+        - "video anomaly detection comprehensive"
+        - "video anomaly detection progress"
+      medium:
+        - "video anomaly detection outlook"
+        - "video anomaly detection future"
+        - "video anomaly detection benchmark"
+      weak:
+        - "video anomaly survey"
+        - "anomaly detection survey"
+    classics: []
+
+  - id: vad-benchmarks
+    name: "数据集与基准"
+    emoji: "🏋"
+    doc: "docs/benchmarks.md"
+    description: "新的异常检测数据集和基准"
+    arxiv_queries:
+      - 'video anomaly benchmark dataset'
+      - 'anomaly detection dataset benchmark'
+    github_queries:
+      - '"anomaly detection" dataset OR "anomaly benchmark"'
+    keywords:
+      strong:
+        - "video anomaly benchmark"
+        - "video anomaly dataset"
+        - "anomaly detection dataset"
+        - "new benchmark anomaly"
+      medium:
+        - "anomaly detection evaluation"
+        - "anomaly benchmark"
+        - "anomaly dataset surveillance"
+      weak:
+        - "anomaly data"
+        - "anomaly collection"
+    classics: []
+
+# 全局配置
+global:
+  # arXiv 检索的 categories
+  arxiv_categories:
+    - "cs.CV"
+    - "cs.AI"
+    - "cs.CL"
+
+  # 抓取频率
+  fetch_interval_days: 1
+
+  # 去重策略：基于 arXiv ID
+  dedup_by: "arxiv_id"
+
+  # 最低分数阈值（低于此分数的论文不会被收录）
+  min_score: 6
+
+  # GitHub 搜索限流保护
+  github_rate_limit: 30
+
+  # 需要排除的关键词（出现则过滤）
+  blocklist_keywords:
+    - "medical imaging anomaly"
+    - "network anomaly"
+    - "intrusion detection"
+    - "industrial defect"
+    - "manufacturing anomaly"
+
+  # 种子论文（手动确认的经典论文）
+  seed_papers:
+    - id: "1903.04648"
+      title: "PatchELH: Density Estimation for Anomaly Detection"
+    - id: "2106.10897"
+      title: "ABNet: Learning Absence of Evidence for Anomaly Detection"
+    - id: "2006.04737"
+      title: "SFA-Net: Spatial-Frequency Awareness for Anomaly Detection"

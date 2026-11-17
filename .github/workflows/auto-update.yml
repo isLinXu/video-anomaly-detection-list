@@ -1,0 +1,56 @@
+name: Auto Update VAD Papers
+
+on:
+  schedule:
+    # Every day at 01:30 UTC (09:30 Beijing time)
+    - cron: '30 1 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch papers from arXiv
+        run: |
+          python scripts/fetch_arxiv.py --days 7
+
+      - name: Track GitHub repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/track_github.py --top 50
+
+      - name: Update metadata and stats
+        run: |
+          python scripts/update_metadata.py
+
+      - name: Render charts
+        run: |
+          python scripts/render_charts.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📚 Auto-update: VAD papers [skip ci]"
+            git push
+          fi

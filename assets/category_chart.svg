@@ -1,0 +1,36 @@
+<svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#1e1e2e" rx="8"/>
+  <text x="340" y="30" text-anchor="middle" fill="#a6e0f7" font-size="20" font-weight="bold">各赛道论文数量</text>
+  <rect x="60" y="40.0" width="60" height="300.0" fill="#a6e0f7" rx="4"/>
+  <text x="90.0" y="30.0" text-anchor="middle" fill="#cdd6f4" font-size="14">6</text>
+  <text x="90.0" y="360" text-anchor="middle" fill="#cdd6f4" font-size="11">🧠</text>
+  <text x="90.0" y="375" text-anchor="middle" fill="#cdd6f4" font-size="9" transform="rotate(-30 90.0 375)">Video Anomaly Understanding</text>
+  <rect x="140" y="90.0" width="60" height="250.0" fill="#a6e0f7" rx="4"/>
+  <text x="170.0" y="80.0" text-anchor="middle" fill="#cdd6f4" font-size="14">5</text>
+  <text x="170.0" y="360" text-anchor="middle" fill="#cdd6f4" font-size="11">🔍</text>
+  <text x="170.0" y="375" text-anchor="middle" fill="#cdd6f4" font-size="9" transform="rotate(-30 170.0 375)">Semi Supervised Vad</text>
+  <rect x="220" y="140.0" width="60" height="200.0" fill="#a6e0f7" rx="4"/>
+  <text x="250.0" y="130.0" text-anchor="middle" fill="#cdd6f4" font-size="14">4</text>
+  <text x="250.0" y="360" text-anchor="middle" fill="#cdd6f4" font-size="11">👁️</text>
+  <text x="250.0" y="375" text-anchor="middle" fill="#cdd6f4" font-size="9" transform="rotate(-30 250.0 375)">Weakly Supervised Vad</text>
+  <rect x="300" y="140.0" width="60" height="200.0" fill="#a6e0f7" rx="4"/>
+  <text x="330.0" y="130.0" text-anchor="middle" fill="#cdd6f4" font-size="14">4</text>
+  <text x="330.0" y="360" text-anchor="middle" fill="#cdd6f4" font-size="11">📊</text>
+  <text x="330.0" y="375" text-anchor="middle" fill="#cdd6f4" font-size="9" transform="rotate(-30 330.0 375)">Fully Supervised Vad</text>
+  <rect x="380" y="190.0" width="60" height="150.0" fill="#a6e0f7" rx="4"/>
+  <text x="410.0" y="180.0" text-anchor="middle" fill="#cdd6f4" font-size="14">3</text>
+  <text x="410.0" y="360" text-anchor="middle" fill="#cdd6f4" font-size="11">🌍</text>
+  <text x="410.0" y="375" text-anchor="middle" fill="#cdd6f4" font-size="9" transform="rotate(-30 410.0 375)">Open World Vad</text>
+  <rect x="460" y="240.0" width="60" height="100.0" fill="#a6e0f7" rx="4"/>
+  <text x="490.0" y="230.0" text-anchor="middle" fill="#cdd6f4" font-size="14">2</text>
+  <text x="490.0" y="360" text-anchor="middle" fill="#cdd6f4" font-size="11">🔎</text>
+  <text x="490.0" y="375" text-anchor="middle" fill="#cdd6f4" font-size="9" transform="rotate(-30 490.0 375)">Video Anomaly Retrieval</text>
+  <rect x="540" y="290.0" width="60" height="50.0" fill="#a6e0f7" rx="4"/>
+  <text x="570.0" y="280.0" text-anchor="middle" fill="#cdd6f4" font-size="14">1</text>
+  <text x="570.0" y="360" text-anchor="middle" fill="#cdd6f4" font-size="11">🔄</text>
+  <text x="570.0" y="375" text-anchor="middle" fill="#cdd6f4" font-size="9" transform="rotate(-30 570.0 375)">Self Supervised Vad</text>
+  <rect x="620" y="290.0" width="60" height="50.0" fill="#a6e0f7" rx="4"/>
+  <text x="650.0" y="280.0" text-anchor="middle" fill="#cdd6f4" font-size="14">1</text>
+  <text x="650.0" y="360" text-anchor="middle" fill="#cdd6f4" font-size="11">💬</text>
+  <text x="650.0" y="375" text-anchor="middle" fill="#cdd6f4" font-size="9" transform="rotate(-30 650.0 375)">Prompt Based Vad</text>
+</svg>

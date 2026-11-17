@@ -1,0 +1,3 @@
+# GitHub repositories to exclude from tracking
+# One per line, lowercase
+# Add repos that are clearly off-topic
